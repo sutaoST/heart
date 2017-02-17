@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跳动</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        html,body{
+            background:#FFACAC;
+        }
+        .box{
+            width: 500px;
+            height: 500px;
+            margin:0 auto;
+            margin-top:200px;
+            position:relative;
+        }
+        .heart{
+            width: 250px;
+            height: 250px;
+            background:#D5093C;
+            border-radius: 200px;
+            position: absolute;
+            float: left;
+            /*left: 65px;*/
+            right: 185px;
+            z-index: 3
+            -moz-transform:rotate(45deg);
+                 transform:rotate(45deg);
+            animation:beate 1s ease 0s infinite normal;
+        }
+        .right{
+            float: left;
+            position:absolute;
+            right: 65px;
+            z-index: 2;
+            -moz-transform:rotate(45deg);
+                 transform:rotate(45deg);
+            animation:beate 1s ease 0s infinite normal;
+        }
+        .bottom{
+            width:197px;
+            height: 200px;
+            background:#D5093C;
+            position: absolute;
+            bottom: 179px;
+            left: 153px;
+            -moz-transform:rotate(45deg);
+                 transform:rotate(45deg);
+            animation:beate 1s ease 0s infinite normal; 
+        }
+        .info{
+            position: absolute;
+            z-index: 999;
+            left: 32%;
+            top:30%;
+            color:#fff;
+            font-weight: 700;
+            font-size:20px;
+            animation:info 1s ease 0s infinite normal;
+        }
+
+        @keyframes beate{
+            0%{
+                transform:scale(1) rotate(225deg);
+                box-shadow: 0 0 40px #d5093c;
+            }
+            50%{
+                transform:scale(1.1) rotate(225deg);
+                box-shadow: 0 0 70px #d5093c;
+            }
+            100%{
+                transform:scale(1) rotate(225deg);
+                box-shadow: 0 0 40px #d5093c;
+            }
+        } 
+
+         @keyframes info{
+            0%{
+                transform:scale(1);
+            }
+            50%{
+                transform:scale(1.5);
+            }
+            100%{
+                transform:scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="heart"></div>
+        <div class="heart right"></div>
+        <div class="bottom"></div>
+        <div class="info">My heart & My love</div>  
+    </div>    
+</body>
+</html>
